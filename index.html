@@ -1,0 +1,130 @@
+Electrical
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guwahati Construction Directory - Electrical Dealers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .directory-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .location-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .location-button:hover {
+            background-color: #2980b9;
+        }
+        .gallery {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .gallery.active {
+            display: block;
+        }
+        .gallery img {
+            max-width: 200px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="directory-title">Guwahati Construction Directory</div>
+        <div class="subtitle">ELECTRICAL DEALER LIST</div>
+    </div>
+
+    <div class="button-container">
+        <button class="location-button" onclick="openGallery('athgaon')">ATHGAON</button>
+        <button class="location-button" onclick="openGallery('akdevroad')">A.K. DEV ROAD / REHABARI / DHIRENPARA</button>
+        <button class="location-button" onclick="openGallery('atroad')">A.T. ROAD</button>
+        <button class="location-button" onclick="openGallery('adabari')">ADABARI / MALIGAON / JALUKBARI</button>
+        <button class="location-button" onclick="openGallery('beltola')">BELTOLA</button>
+        <button class="location-button" onclick="openGallery('bharalumukh')">BHARALUMUKH TO ADABARI</button>
+        <button class="location-button" onclick="openGallery('chatribari')">CHATRIBARI</button>
+        <button class="location-button" onclick="openGallery('fancybazar')">FANCY BAZAR</button>
+        <button class="location-button" onclick="openGallery('gsroad')">GS ROAD</button>
+        <button class="location-button" onclick="openGallery('gnbroad')">GNB ROAD</button>
+        <button class="location-button" onclick="openGallery('hatigaon')">HATIGAON / BHETAPARA</button>
+        <button class="location-button" onclick="openGallery('kahilipara')">KAHILIPARA</button>
+        <button class="location-button" onclick="openGallery('lokhraroad')">LOKHRA ROAD</button>
+        <button class="location-button" onclick="openGallery('lakhtokia')">LAKHTOKIA</button>
+        <button class="location-button" onclick="openGallery('machkowa')">MACHKOWA</button>
+        <button class="location-button" onclick="openGallery('narengi')">NARENGI</button>
+        <button class="location-button" onclick="openGallery('rproad')">RP ROAD</button>
+        <button class="location-button" onclick="openGallery('rammandir')">RAM MANDIR LANE</button>
+        <button class="location-button" onclick="openGallery('tntower')">T.N. TOWER</button>
+        <button class="location-button" onclick="openGallery('zooroad')">ZOO ROAD</button>
+    </div>
+
+    <!-- Gallery Sections (Hidden by Default) -->
+    <div id="athgaon-gallery" class="gallery">
+        <h2>ATHGAON - Electrical Dealers</h2>
+        <p>Upload photos here.</p>
+        <!-- Example image (replace with your own) -->
+        <img src="placeholder.jpg" alt="Dealer Image">
+    </div>
+
+    <!-- Repeat for other locations (hidden by default) -->
+    <div id="akdevroad-gallery" class="gallery">
+        <h2>A.K. DEV ROAD / REHABARI / DHIRENPARA - Electrical Dealers</h2>
+        <p>Upload photos here.</p>
+    </div>
+
+    <!-- Add more galleries for other locations similarly -->
+
+    <script>
+        function openGallery(location) {
+            // Hide all galleries first
+            document.querySelectorAll('.gallery').forEach(gallery => {
+                gallery.classList.remove('active');
+            });
+            
+            // Show the selected gallery
+            const selectedGallery = document.getElementById(`${location}-gallery`);
+            if (selectedGallery) {
+                selectedGallery.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
